@@ -108,7 +108,7 @@ class Button {
 	}
 	
 	function displayButton() {
-		echo "<button type=\"button\" class=\"btn\" \"buttonGap\" \"".$this->value."\">".$this->name."</button>";
+		echo "<button type=\"button\" class=\"btn buttonGap ".$this->value."\">".$this->name."</button>";
 	}
 }
 
