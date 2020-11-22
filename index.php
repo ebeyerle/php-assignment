@@ -64,7 +64,7 @@ $fields=isset($_SESSION['fields'])?$_SESSION['fields']:[];
         "Danger" => "btn-danger",
       );
 			
-			echo "Hello World";
+			echo "<button>Push</button>";
       // loop through the $buttons array
       // using a custom php class you defined, output 2 buttons on the page using the defined caption and css class in $buttons
       // the result should look like the provided image in folder.
