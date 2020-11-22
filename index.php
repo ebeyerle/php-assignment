@@ -63,6 +63,8 @@ $fields=isset($_SESSION['fields'])?$_SESSION['fields']:[];
         "Success" => "btn-success",
         "Danger" => "btn-danger",
       );
+			
+			echo "Hello World";
       // loop through the $buttons array
       // using a custom php class you defined, output 2 buttons on the page using the defined caption and css class in $buttons
       // the result should look like the provided image in folder.
@@ -78,7 +80,7 @@ $fields=isset($_SESSION['fields'])?$_SESSION['fields']:[];
 
 // define your php class below
 // name it "Button"
-
+$dom = new DOMDocument
 
 ?>
 
