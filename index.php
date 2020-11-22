@@ -63,21 +63,15 @@ $fields=isset($_SESSION['fields'])?$_SESSION['fields']:[];
         "Success" => "btn-success",
         "Danger" => "btn-danger",
       );
-			
-//			echo "<button>Success</button>";
-//			echo "<button>Danger</button>";
-			
-			foreach($buttons as $tag => $className){
+						
+			//Loops through the $buttons array and creates a new button for each item in the array
+			foreach($buttons as $caption => $cssClass){
 				$button = new Button();
-				$button -> setKey($tag);
-				$button -> setValue($className);
+				$button -> setCaption($caption);
+				$button -> setClass($cssClass);
 				$button -> displayButton();
 			}
 			
-/*			$button = new Button();
-			$button -> setValue();
-			$button -> displayButton();
-*/
       // loop through the $buttons array
       // using a custom php class you defined, output 2 buttons on the page using the defined caption and css class in $buttons
       // the result should look like the provided image in folder.
@@ -94,21 +88,19 @@ $fields=isset($_SESSION['fields'])?$_SESSION['fields']:[];
 // define your php class below
 // name it "Button"
 class Button {
-	var $name = "";
-	var $value = "";
-	var $buttonClass1 = "btn";
-	var $buttonClass2 = "buttonGap";
+	var $caption = "";
+	var $cssClass = "";
 	
-	function setKey($n) {
-		$this->name = $n;
+	function setCaption($n) {
+		$this->caption = $n;
 	}
 	
-	function setValue($v) {
-		$this->value = $v;
+	function setClass($n) {
+		$this->cssClass = $n;
 	}
 	
 	function displayButton() {
-		echo "<button type=\"button\" class=\"btn buttonGap ".$this->value."\">".$this->name."</button>";
+		echo "<button type=\"button\" class=\"btn buttonGap ".$this->cssClass."\">".$this->caption."</button>";
 	}
 }
 
