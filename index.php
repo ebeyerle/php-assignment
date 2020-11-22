@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once'helpers/security.php';
+$errors=isset($_SESSION['errors'])?$_SESSION['errors']:[];
+$fields=isset($_SESSION['fields'])?$_SESSION['fields']:[];
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -80,4 +86,9 @@ class Button {
 }
 
 
+?>
+
+<?php
+unset($_SESSION['errors']);
+unset($_SESSION['fields']);
 ?>
