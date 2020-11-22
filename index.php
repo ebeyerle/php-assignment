@@ -78,12 +78,6 @@ $fields=isset($_SESSION['fields'])?$_SESSION['fields']:[];
 
 // define your php class below
 // name it "Button"
-class Button {
-	public $key;
-	public $value;
-	
-	function __construct()
-}
 
 
 ?>
