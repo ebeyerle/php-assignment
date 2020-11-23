@@ -86,10 +86,10 @@ $fields=isset($_SESSION['fields'])?$_SESSION['fields']:[];
 // define your php class below
 // name it "Button"
 class Button {
-	protected const $caption = "";
-	protected const $cssClass = "";
+	private ?string $caption;
+	private ?string $cssClass;
 	
-	public function __construct(const $caption, const $cssClass) {
+	public function __construct(?string $caption, ?string $cssClass) {
 		$this->caption  = $caption;
 		$this->cssClass = $cssClass;
 	}
