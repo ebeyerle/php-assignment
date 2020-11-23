@@ -66,9 +66,7 @@ $fields=isset($_SESSION['fields'])?$_SESSION['fields']:[];
 						
 			//Loops through the $buttons array and creates a new button for each item in the array
 			foreach($buttons as $caption => $cssClass){
-				$button = new Button();
-				$button -> setCaption($caption);
-				$button -> setClass($cssClass);
+				$button = new Button($caption, $cssClass);
 				$button -> displayButton();
 			}
 			
@@ -88,18 +86,15 @@ $fields=isset($_SESSION['fields'])?$_SESSION['fields']:[];
 // define your php class below
 // name it "Button"
 class Button {
-	var $caption = "";
-	var $cssClass = "";
+	protected const $caption = "";
+	protected const $cssClass = "";
 	
-	function setCaption($n) {
-		$this->caption = $n;
+	public function __construct(const $caption, const $cssClass) {
+		$this->caption  = $caption;
+		$this->cssClass = $cssClass;
 	}
 	
-	function setClass($n) {
-		$this->cssClass = $n;
-	}
-	
-	function displayButton() {
+	public function displayButton() {
 		echo "<button type=\"button\" class=\"btn buttonGap ".$this->cssClass."\">".$this->caption."</button>";
 	}
 }
